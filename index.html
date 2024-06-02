@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>국가권력급 쇼핑몰</title>
+<html lang="ko">
     <style>
-        header {
-            position: absolute;
-            width: 100%;
-            height: 71px;
-            background: url(header.png);
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-            text-align: center;
-            padding-top: 20px;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin-top: 100px;
-        }
+      sy{position: absolute;
+width: 206.86px;
+height: 55.06px;
+left: 26px;
+top: 7px;
 
-        .sitemap {
+font-family: 'Grenze Gotisch';
+font-style: normal;
+font-weight: 400;
+font-size: 35.7177px;
+line-height: 53px;
+
+color: #000000;}
+
+.sitemap {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -81,12 +76,111 @@
             height: auto;
             margin-right: 10px;
         }
-    </style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.icons span {
+    margin-left: 15px;
+}
+
+.main-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.main-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info p, .footer-links a {
+    margin: 5px 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+}
+
+        </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park SY Studio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        
+        <img src="header.png" width="1700" height="80">
     </header>
+    <main>
+        <div class="main-logo">
+            <img src="썸네일.png" border="0" width="600" height="600" >
+        </div>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <p>주식회사 폴리텍</p>
+            <p>CEO: 박시영</p>
+            <p>Address: 인천시 남동구 논고개로123번길 35 칼리오페빌딩 7층 701호</p>
+            <p>Email: <a href="mailto:parkseeyoung051013@naver.com">parkseeyoung051013@naver.com</a></p>
+            <p>Tel: 010-4155-8350</p>
+            <p>Business License: 3141-1592</p>
+            <p>&copy; 2024 Park SY</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Agreement</a>
+            <a href="#">Privacy</a>
+            <a href="#">Guide</a>
+        </div>
+    </footer>
+
     <div class="sitemap">
         <ul>
             <li class="parentMenu">
