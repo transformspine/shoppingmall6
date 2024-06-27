@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park SY Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
     <style>
-
-     body {
+        body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
 }
 
 header {
@@ -31,19 +35,19 @@ header {
     color: #000;
 }
 
-nav ul {
+.nav-icons {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+.nav-icons li {
     position: relative;
     margin: 0 10px;
 }
 
-nav ul li a {
+.nav-icons li a {
     text-decoration: none;
     color: #000;
 }
@@ -54,7 +58,7 @@ nav ul li a {
     display: block;
 }
 
-nav ul li ul {
+.nav-icons li ul {
     display: none;
     position: absolute;
     top: 40px;
@@ -66,7 +70,7 @@ nav ul li ul {
     z-index: 1000;
 }
 
-nav ul li.show ul {
+.nav-icons li.active ul {
     display: block;
 }
 
@@ -85,130 +89,13 @@ footer {
     padding: 20px;
     background-color: #f4f4f4;
     border-top: 1px solid #ddd;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-
-.footer-info p {
-    margin: 5px 0;
-    color: #666;
-}
-
-
-        }
-        /*검색아이콘*/
-        .searchImg {
-            display: block;
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-        /* 대메뉴 */
-        .parentMenu > ul {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        /* 하위 메뉴 펼치기 */
-        .parentMenu.active > ul {
-            max-height: 1000px;
-        }
-
-        /* 하위 메뉴 */
-        .parentMenu > ul > li > ul {
-            display: none;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        /* 클릭 시 하위 하위 메뉴 펼쳐지짐 */
-        .parentMenu > ul > li.active > ul {
-            display: block;
-            max-height: 1000px;
-        }
-
-        /* 꼬레아 사진 */
-        .countryImg {
-            display: block;
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-        
-        .cartimg{
-            display: block;
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .menuimg{
-            display: block;
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .mypageImg {
-            display: block;
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-
-
-
-
-
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 50px;
-    margin-right: 10px;
-}
-
-
-
-
-.icons span {
-    margin-left: 15px;
-}
-
-.main-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
-
-.main-logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-footer {
-    background-color: #f9f9f9;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact-info p, .footer-links a {
-    margin: 5px 0;
 }
 
 .footer-links {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
 }
 
 .footer-links a {
@@ -216,32 +103,30 @@ footer {
     color: #000;
 }
 
-        </style>
+.footer-info p {
+    margin: 5px 0;
+    color: #666;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Park SY Studio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
+        </style>
 <body>
     <header>
         <div class="header-container">
             <h1 class="logo">park sy</h1>
             <nav>
                 <ul class="nav-icons">
-                    <li class="parentMenu" id="countryMenu">
+                    <li class="parentMenu">
                         <a href="#country">
-                            <img class="icon" src="country_flag.png" alt="Country">
+                            <img class="icon countryImg" src="country_flag.png" alt="Country">
                         </a>
                         <ul>
                             <li>국가 목록</li>
                             <li>언어 설정</li>
                         </ul>
                     </li>
-                    <li class="parentMenu" id="cartMenu">
+                    <li class="parentMenu">
                         <a href="#cart">
-                            <img class="icon" src="스크린샷 2024-05-02 234818.png" alt="Cart">
+                            <img class="icon cartImg" src="스크린샷 2024-05-02 234818.png" alt="Cart">
                         </a>
                         <ul>
                             <li>장바구니 목록</li>
@@ -250,23 +135,25 @@ footer {
                             <li>할인 코드 적용</li>
                         </ul>
                     </li>
-                    <li class="parentMenu" id="mypageMenu">
+                    <li class="parentMenu">
                         <a href="#mypage">
-                            <img class="icon" src="스크린샷 2024-05-02 234826.png" alt="My Page">
+                            <img class="icon mypageImg" src="스크린샷 2024-05-02 234826.png" alt="My Page">
                         </a>
                         <ul>
-                            <li><a href="profile.html">회원 정보</a></li>
-                            <li><a href="order_history.html">주문 내역</a></li>
+                            <li>회원 정보</li>
+                            <li>주문 내역</li>
+                            <li>배송 추적</li>
+                            <li>위시리스트</li>
                         </ul>
                     </li>
                     <li>
                         <a href="#search">
-                            <img class="icon" src="스크린샷 2024-05-02 234834.png" alt="Search">
+                            <img class="icon searchImg" src="스크린샷 2024-05-02 234834.png" alt="Search">
                         </a>
                     </li>
-                    <li class="parentMenu" id="menuMenu">
+                    <li class="parentMenu">
                         <a href="#menu">
-                            <img class="icon" src="스크린샷 2024-05-02 234841.png" alt="Menu">
+                            <img class="icon menuImg" src="스크린샷 2024-05-02 234841.png" alt="Menu">
                         </a>
                         <ul>
                             <li class="parentMenu">
@@ -286,32 +173,27 @@ footer {
     </header>
     <main>
         <div class="logo-container">
-            <img src="썸네일.png" alt="Park SY Studio Logo">
-            
+            <img src="스크린샷 2024-05-02 234834.png" alt="Park SY Studio Logo">
+            <h2>PARK SY STUDIO</h2>
         </div>
     </main>
     <footer>
-       
+        <div class="footer-links">
+            <a href="#">Agreement</a>
+            <a href="#">Privacy</a>
+            <a href="#">Guide</a>
+        </div>
         <div class="footer-info">
             <p>주식회사 폴리텍</p>
             <p>CEO: 박시영</p>
             <p>Address: 인천시 남동구 논고개로123번길 35 칼리오페빌딩 7층 701호</p>
-            <p>Email: parkseeyoung051013@naver.com</p>
+            <p>Email: <a href="mailto:parkseeyoung051013@naver.com">parkseeyoung051013@naver.com</a></p>
             <p>Tel: 010-4155-8350</p>
             <p>Business License: 3141-1592</p>
-            <p>© 2024 parksy</p>
+            <p>&copy; 2024 Park SY</p>
         </div>
     </footer>
-</body>
-</html>
-
-
-
-    
-
-   
-
-  <script>
+    <script>
         const parentMenus = document.querySelectorAll('.parentMenu');
         parentMenus.forEach(parentMenu => {
             parentMenu.addEventListener('click', () => {
@@ -321,5 +203,4 @@ footer {
     </script>
 </body>
 </html>
-
 
