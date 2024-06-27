@@ -2,21 +2,7 @@
 <html lang="ko">
     <style>
 
-      sy{position: absolute;
-width: 206.86px;
-height: 55.06px;
-left: 26px;
-top: 7px;
-
-font-family: 'Grenze Gotisch';
-font-style: normal;
-font-weight: 400;
-font-size: 35.7177px;
-line-height: 53px;
-
-color: #000000;}
-
-body {
+     body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -63,8 +49,8 @@ nav ul li a {
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     display: block;
 }
 
@@ -80,10 +66,8 @@ nav ul li ul {
     z-index: 1000;
 }
 
-
-
-nav ul li ul li {
-    margin: 0;
+nav ul li.show ul {
+    display: block;
 }
 
 .logo-container {
@@ -92,8 +76,8 @@ nav ul li ul li {
 }
 
 .logo-container img {
-    width: 270px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
 }
 
 footer {
@@ -113,12 +97,16 @@ footer {
     margin-bottom: 10px;
 }
 
-
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+}
 
 .footer-info p {
     margin: 5px 0;
     color: #666;
 }
+
 
         }
         /*검색아이콘*/
@@ -240,19 +228,12 @@ footer {
 }
 
         </style>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-   <!DOCTYPE html>
-<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>Park SY Studio</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -260,7 +241,7 @@ footer {
             <h1 class="logo">park sy</h1>
             <nav>
                 <ul class="nav-icons">
-                    <li class="parentMenu">
+                    <li class="parentMenu" id="countryMenu">
                         <a href="#country">
                             <img class="icon" src="country_flag.png" alt="Country">
                         </a>
@@ -269,7 +250,7 @@ footer {
                             <li>언어 설정</li>
                         </ul>
                     </li>
-                    <li class="parentMenu">
+                    <li class="parentMenu" id="cartMenu">
                         <a href="#cart">
                             <img class="icon" src="스크린샷 2024-05-02 234818.png" alt="Cart">
                         </a>
@@ -280,7 +261,7 @@ footer {
                             <li>할인 코드 적용</li>
                         </ul>
                     </li>
-                    <li class="parentMenu">
+                    <li class="parentMenu" id="mypageMenu">
                         <a href="#mypage">
                             <img class="icon" src="스크린샷 2024-05-02 234826.png" alt="My Page">
                         </a>
@@ -294,7 +275,7 @@ footer {
                             <img class="icon" src="스크린샷 2024-05-02 234834.png" alt="Search">
                         </a>
                     </li>
-                    <li class="parentMenu">
+                    <li class="parentMenu" id="menuMenu">
                         <a href="#menu">
                             <img class="icon" src="스크린샷 2024-05-02 234841.png" alt="Menu">
                         </a>
@@ -321,7 +302,11 @@ footer {
         </div>
     </main>
     <footer>
-       
+        <div class="footer-links">
+            <a href="#agreement">Agreement</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#guide">Guide</a>
+        </div>
         <div class="footer-info">
             <p>주식회사 폴리텍</p>
             <p>CEO: 박시영</p>
@@ -333,21 +318,28 @@ footer {
         </div>
     </footer>
 </body>
-<html>
+</html>
+
 
 
     
 
    
 
-    <script>
-        const parentMenus = document.querySelectorAll('.parentMenu');
-        parentMenus.forEach(parentMenu => {
-            parentMenu.addEventListener('click', () => {
-                parentMenu.classList.toggle('active');
+   document.addEventListener('DOMContentLoaded', () => {
+    const parentMenus = document.querySelectorAll('.parentMenu');
+
+    parentMenus.forEach(menu => {
+        menu.addEventListener('click', () => {
+            // 다른 메뉴 닫기
+            parentMenus.forEach(item => {
+                if (item !== menu) {
+                    item.classList.remove('show');
+                }
             });
+            // 클릭한 메뉴 열기/닫기
+            menu.classList.toggle('show');
         });
-    </script>
-</body>
-</html>
+    });
+});
 
