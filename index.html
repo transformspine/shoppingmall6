@@ -35,7 +35,13 @@ color: #000000;}
         li {
             margin: 10px;
         }
-
+        /*검색아이콘*/
+        .searchImg {
+            display: block;
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
         /* 대메뉴 */
         .parentMenu > ul {
             max-height: 0;
@@ -69,19 +75,35 @@ color: #000000;}
             height: auto;
             margin-right: 10px;
         }
-        /*검색아이콘*/
-        .searchImg {
+        
+        .cartimg{
             display: block;
             width: 50px;
             height: auto;
             margin-right: 10px;
         }
 
+        .menuimg{
+            display: block;
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .mypageImg {
+            display: block;
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+
 
 
 
@@ -157,7 +179,72 @@ footer {
 </head>
 <body>
     <header>
-        <img src="header.png" width="1700" height="80">
+        <div class="sitemap">
+            <h1>park sy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="parentMenu">
+                    <a href="#country">
+                        <img class="countryImg" src="country_flag.png" > 
+                    </a>
+                    <ul>
+                        <li>국가 목록</li>
+                        <li>언어 설정</li>
+                    </ul>
+                </li>
+                <li class="parentMenu">
+                    <a href="#cart"><img class="cartimg" src="스크린샷 2024-05-02 234818.png"></a>
+                    <ul>
+                        <li>장바구니 목록</li>
+                        <li>결제 페이지</li>
+                        <li>배송 정보 입력</li>
+                        <li>할인 코드 적용</li>
+                    </ul>
+                </li>
+                <li class="parentMenu">
+                    <a href="#mypage"><img class="#mypageImg" src="스크린샷 2024-05-02 234826.png" ></a>
+                    <ul>
+                        <li>회원 정보</li>
+                        <li>주문 내역</li>
+                        <li>배송 추적</li>
+                        <li>위시리스트</li>
+                    </ul>
+                </li>
+                <li><a href="#search"><img class="searchImg" src="스크린샷 2024-05-02 234834.png" ></a></li>
+                <li class="parentMenu">
+                    <a href="#menu"><img class="menuimg" src="스크린샷 2024-05-02 234841.png"></a>
+                    <ul>
+                        <li class="parentMenu">
+                            <a href="#shop">SHOP</a>
+                            <ul>
+                                <li><a href="all.html">ALL</a></li> <!-- 상품 페이지 링크 추가 -->
+                                <li class="parentMenu">
+                                    <a href="outer.html">OUTER</a> <outer.html>
+                                </li>
+                                <li class="parentMenu">
+                                    <a href="top.html">TOP</a> <!-- 상품 페이지 링크 추가 -->
+                                </li>
+                                <li class="parentMenu">
+                                    <a href="bottom.html">BOTTOM</a> <!-- 상품 페이지 링크 추가 -->
+                                </li>
+                            </ul>
+                        </li>
+                        
+                               
+                            </ul>
+                        </li>
+                        <li class="parentMenu">
+                            <a href="#social">SOCIAL MEDIA</a>
+                            <ul>
+                                <li>YouTube</li>
+                                <li>Instagram</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="main-logo">
@@ -181,86 +268,7 @@ footer {
         </div>
     </footer>
 
-    <div class="sitemap">
-        <ul>
-            <li class="parentMenu">
-                <a href="#country">
-                    <img class="countryImg" src="country_flag.png" > 
-                </a>
-                <ul>
-                    <li>국가 목록</li>
-                    <li>언어 설정</li>
-                </ul>
-            </li>
-            <li class="parentMenu">
-                <a href="#cart">장바구니</a>
-                <ul>
-                    <li>장바구니 목록</li>
-                    <li>결제 페이지</li>
-                    <li>배송 정보 입력</li>
-                    <li>할인 코드 적용</li>
-                </ul>
-            </li>
-            <li class="parentMenu">
-                <a href="#mypage">마이페이지</a>
-                <ul>
-                    <li>회원 정보</li>
-                    <li>주문 내역</li>
-                    <li>배송 추적</li>
-                    <li>위시리스트</li>
-                </ul>
-            </li>
-            <li><a href="#search"><img class="searchImg" src="스크린샷 2024-05-02 234834.png" ></a></li>
-            <li class="parentMenu">
-                <a href="#menu">메뉴</a>
-                <ul>
-                    <li class="parentMenu">
-                        <a href="#shop">SHOP</a>
-                        <ul>
-                            <li>ALL</li>
-                            <li class="parentMenu">
-                                <a href="#outer">OUTER</a>
-                                <ul>
-                                    <li>자켓</li>
-                                    <li>코트</li>
-                                    <li>패딩</li>
-                                </ul>
-                            </li>
-                            <li class="parentMenu">
-                                <a href="#top">TOP</a>
-                                <ul>
-                                    <li>티셔츠</li>
-                                    <li>셔츠</li>
-                                </ul>
-                            </li>
-                            <li class="parentMenu">
-                                <a href="#bottom">BOTTOM</a>
-                                <ul>
-                                    <li>바지</li>
-                                    <li>반바지</li>
-                                </ul>
-                            </li>
-                            <li class="parentMenu">
-                                <a href="#acc">ACC</a>
-                                <ul>
-                                    <li>가방</li>
-                                    <li>모자</li>
-                                    <li>주얼리</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="parentMenu">
-                        <a href="#social">SOCIAL MEDIA</a>
-                        <ul>
-                            <li>YouTube</li>
-                            <li>Instagram</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+   
 
     <script>
         const parentMenus = document.querySelectorAll('.parentMenu');
@@ -272,3 +280,4 @@ footer {
     </script>
 </body>
 </html>
+
