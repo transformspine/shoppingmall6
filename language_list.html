@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>언어 선택</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    margin: 0;
+    color: #000;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.language-selection-container {
+    text-align: center;
+}
+
+.language-list {
+    list-style: none;
+    padding: 0;
+}
+
+.language-item {
+    display: inline-block;
+    margin: 20px;
+}
+
+.language-item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.language-item img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+    </style>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">park sy</h1>
+        </div>
+    </header>
+    <main>
+        <div class="language-selection-container">
+            <h2>언어 선택</h2>
+            <ul class="language-list">
+                <li class="language-item">
+                    <a href="index_ko.html">
+                        <img src="country_flag.png" alt="한국어">
+                        <span>한국어</span>
+                    </a>
+                </li>
+                <li class="language-item">
+                    <a href="index_en.html">
+                        <img src="usa.png" alt="영어">
+                        <span>English</span>
+                    </a>
+                </li>
+                <li class="language-item">
+                    <a href="index_jp.html">
+                        <img src="japan.png" alt="일본어">
+                        <span>日本語</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p>주식회사 폴리텍</p>
+            <p>CEO: 박시영</p>
+            <p>Address: 인천시 남동구 논고개로123번길 35 칼리오페빌딩 7층 701호</p>
+            <p>Email: <a href="mailto:parkseeyoung051013@naver.com">parkseeyoung051013@naver.com</a></p>
+            <p>Tel: 010-4155-8350</p>
+            <p>Business License: 3141-1592</p>
+            <p>&copy; 2024 Park SY</p>
+        </div>
+    </footer>
+</body>
+</html>
